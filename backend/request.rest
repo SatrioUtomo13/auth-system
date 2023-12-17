@@ -1,0 +1,58 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJzYXRyaW8gdXRvbW8iLCJlbWFpbCI6ImVtYWlsQGdtYWlsLmNvbSIsImdlbmRlciI6InByaWEiLCJpYXQiOjE3MDI2NDQ4NTEsImV4cCI6MTcwMjY0NDg3MX0.h4QfmZWf5YnmeqozWIGd4p2-ADuHesGsh7CiZyMRrZ4
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "satrio utomo2",
+    "email": "email2@gmail.com",
+    "gender": "pria",
+    "password": "123456",
+    "confPassword": "123457"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "email@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/1
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Management Stok Barang",
+    "model": "Desktop",
+    "status": 1
+}
+
+###
+PATCH http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "name": "Customer Relationship Management App",
+    "model": "Desktop",
+    "status": 1
+}
+
+###
+DELETE http://localhost:5000/products/1
